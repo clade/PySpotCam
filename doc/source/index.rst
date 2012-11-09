@@ -22,7 +22,7 @@ To install PySpotCam, download the `package`_ and run the command
 
 You can also directly **move** the :file:`PySpotCam` directory to a location
 that Python can import from (directory in which scripts 
-using :mod:`PyDAQmx` are run, etc.)
+using :mod:`PySpotCam` are run, etc.)
 
 Usage
 =====
@@ -58,6 +58,6 @@ Contents:
    Description of the PySpotCam functions <description>
 
 .. _SPOT Imaging Solutions: http://www.spotimaging.com/
-.. _package: http://pypi.python.org/pypi/PySpotCam
+.. _package: http://pypi.python.org/pypi/PySpotCam/
 .. _Pierre Cladé: mailto:pierre.clade@spectro.jussieu.fr
 

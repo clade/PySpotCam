@@ -30,15 +30,13 @@ Installation
 
 You need to install the driver from `SPOT Imaging Solutions`_.
 
-To install PySpotCam, download the `package`_ and run the command 
-
-.. code-block:: sh
+To install PySpotCam, download the `package`_ and run the command ::
 
    python setup.py install
 
-You can also directly **move** the :file:`PySpotCam` directory to a location
+You can also directly **move** the `PySpotCam` directory to a location
 that Python can import from (directory in which scripts 
-using :mod:`PyDAQmx` are run, etc.)
+using `PySpotCam` are run, etc.)
 
 Usage
 =====
