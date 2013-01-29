@@ -3,6 +3,7 @@ from ctypes import *
 
 import SpotCamEnum
 import SpotCamCStructure
+import SpotCamConstant
 
 try:
     _SpotCam=windll.LoadLibrary("SpotCam.dll")
@@ -248,8 +249,8 @@ def Exit():
 
 def FindDevices():
     """Obtain a list of available camera devices on the machine"""
-    pstDevices = (SpotCamCStructure.SPOT_DEVICE_STRUCT*SpotCamConstant.SPOT_MAX_DEVICES)()
-    pnNumDevices = (ctypes.c_int*SpotCamConstant.SPOT_MAX_DEVICES)()
+    pstDevices = (SpotCamCStructure.DEVICE_STRUCT*SpotCamConstant.MAX_DEVICES)()
+    pnNumDevices = (ctypes.c_int*SpotCamConstant.MAX_DEVICES)()
     _FindDevices(pstDevices, pnNumDevices)
     return zip(pnNumDevices[:], pstDevices[:]) # Look 
 
