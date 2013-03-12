@@ -90,7 +90,7 @@ class SpotClass(object):
     def SetExposure(self, gain=None, time=None):
         if gain or time:
             exposure = self.Exposure
-            if gain is not None : exposure.ngain = gain
+            if gain is not None : exposure.nGain = gain
             if time is not None : exposure.sub_field.lExpMSec = time
             self.Exposure = exposure  
 
