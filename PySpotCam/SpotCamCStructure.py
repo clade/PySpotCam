@@ -21,6 +21,13 @@ class StrucUnionRepr(object):
         class_name = self.__class__.__name__
         valeurs = ["\t%s = %s"%(name, str(getattr(self, name)).replace('\t','\t\t')) for (name, valtype) in self._fields_]
         return "%s(\n%s)"%(class_name, ',\n'.join(valeurs))
+    # One of the draw back of properties is that spell mistake in the attribute name
+    # does not raise an error but simply create a new instance attribute
+    # This __setattr__ raise an error when one try to set an attribute that is not in the _fields_
+    def __setattr__(self, name, value):
+        if name not in [elm[0] for elm in self._fields_]:
+            raise AttributeError("Can not set attribute '{name}' to instances of the class {cls}".format(name=name, cls=self.__class__))
+        super(StrucUnionRepr, self).__setattr__(name, value)
     
 class Structure(Structure, StrucUnionRepr):
     pass

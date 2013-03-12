@@ -134,5 +134,13 @@ class SpotClass(object):
     ColorFilterPosition = static_property(QueryColorFilterPosition)
     Status = static_property(QueryStatus)
 
+    # One of the draw back of properties is that spell mistake in the attribute name
+    # does not raise an error but simply create a new instance attribute
+    # This __setattr__ method prevent creation of new attribute
+    def __setattr__(self, name, value):
+        if not hasattr(self, name):
+            raise AttributeError("Can not set new attribute to SpotCam instances")
+        super(SpotClass, self).__setattr__(name, value)
+
     del attr, fname, elm
 
