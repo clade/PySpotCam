@@ -4,7 +4,7 @@ import sys
 #from distutils.core import setup
 from setuptools import setup
 
-version = '1.0.0'
+version = '1.0.1'
 
 setup(name="PySpotCam", version=version,
       author=u'Pierre Cladé', author_email="pierre.clade@spectro.jussieu.fr",
@@ -56,6 +56,12 @@ Here is a small example ::
     print Spot.VersionInfo2
 
 Almost all the functions described in the SPOTCam API are implemented.
+
+History
+=======
+
+1.0.0 : Initial release
+1.0.1 : Error in the SetExposure method corrected
 
 Contact
 =======
