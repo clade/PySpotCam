@@ -60,8 +60,8 @@ Almost all the functions described in the SPOTCam API are implemented.
 History
 =======
 
-1.0.0 : Initial release
-1.0.1 : Error in the SetExposure method corrected
+* 1.0.0 : Initial release
+* 1.0.1 : Error in the SetExposure method corrected
 
 Contact
 =======
